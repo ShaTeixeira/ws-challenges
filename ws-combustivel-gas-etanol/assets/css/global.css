@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+
+body {
+  background:#1b78aa;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  background: #323232cc;
+
+  font-size: 1rem;
+  line-height: 30px;
+
+  margin: auto;
+  padding: 20px 40px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  box-shadow: 5px 5px 20px #00000033;
+  border-radius: 2px;
+}
+
+.error_message {
+  font-size: 0.6rem;
+  color: #ff0000;
+}
+.success_message {
+  font-size: 0.6rem;
+  color: #008000;
+}
+
+.inline-area {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.input-area {
+  background: #eee;
+  padding: 20px 10px;
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+input {
+  background: #fff;
+  padding: 10px;
+  border: 0;
+  height: 1.5rem;
+  outline: none;
+}
+input:invalid,
+textarea:invalid,
+.invalid {
+  border-left: 2px solid #ff0000;
+  margin-left: -2px;
+}
+
+textarea {
+  background: #eee;
+  border: 0;
+  padding: 10px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.gasolina {
+  background: #e6b30c;
+}
+.etanol {
+  background: #005180;
+}
+.form h1 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #fff;
+
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+}
+.form label {
+  font-weight: bold;
+  color: #fff;
+  font-size: 0.8rem;
+}
+
+
+.button-area {
+  display: flex;
+  justify-content: flex-end;
+}
+.btn {
+  width: 100%;
+  padding: 20px;
+  background: none;
+  border: none;
+  border-radius: 2px;
+}
+.btn:hover {
+  cursor: pointer;
+}
+.btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.btn-submit {
+  background: #ddd;
+  background: #87ceeb;
+  color: #111;
+}
+#loader-overlay {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+.loader {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #1b78aa;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 2s linear infinite;
+}
+
+.winner {
+  animation: zoominOut 2s linear;
+}
+
+.d-none {
+  display: none !important;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes zoominOut {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  70% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: rotate(1.5);
+  }
+}
