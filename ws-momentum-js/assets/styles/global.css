@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+
+:root {
+  --main-bg-color: #222;
+  --main-text-color: #525252c4;
+  --secondary-text-color: #ffffff;
+}
+
+body {
+  background: var(--main-bg-color);
+  min-height: 100vh;
+
+  background-image: url("../images/bg.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.middle {
+  color: var(--main-text-color);
+  width: 100%;
+  text-align: center;
+}
+
+.middle h1 {
+  font-size: 120px;
+  font-weight: normal;
+}
+
+.middle h3 {
+  font-weight: normal;
+  font-size: 50px;
+}
+
+.bottom {
+  color: var(--secondary-text-color);
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom .phrase {
+  text-align: center;
+  margin: 20px;
+  text-shadow: 0px 0px 5px #777;
+}
+
+.bottom .author {
+  overflow: hidden;
+  height: 0px;
+  transition: all ease 0.2s;
+}
+
+.bottom .phrase:hover .author {
+  height: 20px;
+}
+
+@media (max-width: 600px) {
+  .middle h1 {
+    font-size: 80px;
+  }
+
+  .middle h3 {
+    font-size: 40px;
+  }
+}
